@@ -56,6 +56,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private double latitud;
     private double longitud;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
