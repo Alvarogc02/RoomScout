@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_usuario"
+            android:icon="@drawable/nav_user"
+            android:title="Usuario"
+            android:enabled="false"/>
+
+        <item
+            android:id="@+id/nav_hoteles"
+            android:icon="@drawable/nav_hoteles"
+            android:title="Hoteles" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/nav_map"
+            android:title="Mapa" />
+
+
+        <item
+            android:id="@+id/nav_misreservas"
+            android:icon="@drawable/nav_misreservas"
+            android:title="Mis reservas" />
+
+        <item
+            android:id="@+id/nav_favs"
+            android:icon="@drawable/nav_favs"
+            android:title="Favoritos" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/nav_exit"
+            android:title="Cerrar sesión" />
+    </group>
+</menu>
