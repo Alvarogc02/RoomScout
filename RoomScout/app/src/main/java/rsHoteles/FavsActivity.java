@@ -62,6 +62,9 @@ public class FavsActivity extends AppCompatActivity implements NavigationView.On
     private String nick;
     private boolean ordenMenorAMayor = true;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
