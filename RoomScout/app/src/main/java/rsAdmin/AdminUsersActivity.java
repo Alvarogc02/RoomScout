@@ -33,6 +33,10 @@ public class AdminUsersActivity extends AppCompatActivity {
 
     private Button btnAnadirUser, btnVolver;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

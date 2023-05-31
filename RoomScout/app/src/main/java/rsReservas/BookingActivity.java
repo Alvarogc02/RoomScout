@@ -30,29 +30,38 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import rsAdmin.AdminInsertActivity;
+import rsAdmin.AdminListActivity;
 import rsConexion.Conexion;
 import io.realm.mongodb.RealmResultTask;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
+import rsHoteles.ListActivity;
 
 public class BookingActivity extends AppCompatActivity {
 
     private TextView tvHotel, tvFechaIda, tvFechaVuelta;
     private EditText etPersonas;
-    private Button btnReservar, btnFechas;
+    private Button btnReservar, btnFechas, btnVolver;
 
     private long fechaIda = 0, fechaVuelta = 0;
     private String hotel, nick, fechaIdaString, fechaVueltaString;
     private int precioTotal, precioNoche;
-    private boolean seleccionandoFechaIda = true;
+    private Bundle bundle;
+
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
-        Bundle bundle = this.getIntent().getExtras();
+        bundle = this.getIntent().getExtras();
         hotel = bundle.getString("hotel");
         nick = bundle.getString("nick");
+
+        btnVolver = findViewById(R.id.btnVolver);
 
         btnFechas = findViewById(R.id.btnFechas);
 
@@ -67,6 +76,16 @@ public class BookingActivity extends AppCompatActivity {
 
         MaterialDatePicker<Pair<Long, Long>> materialDatePicker = MaterialDatePicker.Builder.dateRangePicker()
                 .build();
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookingActivity.this, ListActivity.class);
+                bundle.putString("nick", nick);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         btnFechas.setOnClickListener(new View.OnClickListener() {
             @Override

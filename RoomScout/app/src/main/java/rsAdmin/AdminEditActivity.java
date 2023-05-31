@@ -50,7 +50,7 @@ public class AdminEditActivity extends AppCompatActivity implements OnMapReadyCa
 
     private EditText etNombre, etPrecio;
     private TextView tvDireccion;
-    private Button btnGuardar;
+    private Button btnGuardar, btnVolver;
 
     private GoogleMap mMap;
     private Marker marcadorActual;
@@ -65,11 +65,15 @@ public class AdminEditActivity extends AppCompatActivity implements OnMapReadyCa
 
     Hotel hotel;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_insert);
+        setContentView(R.layout.activity_admin_edit);
 
         Bundle bundle = this.getIntent().getExtras();
         hotelAEditar = bundle.getString("nombreHotel");
@@ -80,6 +84,7 @@ public class AdminEditActivity extends AppCompatActivity implements OnMapReadyCa
 
         tvDireccion = findViewById(R.id.tvDireccion);
 
+        btnVolver = findViewById(R.id.btnVolver);
         btnGuardar = findViewById(R.id.btnGuardar);
 
         // Obtener el mapa asincrónicamente
@@ -90,31 +95,45 @@ public class AdminEditActivity extends AppCompatActivity implements OnMapReadyCa
         Conexion.conectarBD(AdminEditActivity.this);
         new ConexionTask().execute();
 
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminEditActivity.this, AdminListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nombre = etNombre.getText().toString();
                 precio = Integer.parseInt(etPrecio.getText().toString());
+                direccion = tvDireccion.getText().toString();
 
-                Document updateDocument = new Document().append("$set", new Document()
-                        .append("nombre", nombre)
-                        .append("direccion", direccion)
-                        .append("precio/noche", precio)
-                        .append("latitud", latitud)
-                        .append("longitud", longitud));
+                // Verificar si algún campo está vacío
+                if (nombre.isEmpty() || direccion.isEmpty() || etPrecio.getText().toString().isEmpty()) {
+                    Toast.makeText(AdminEditActivity.this, "Debe completar todos los campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    Document updateDocument = new Document().append("$set", new Document()
+                            .append("nombre", nombre)
+                            .append("direccion", direccion)
+                            .append("precio/noche", precio)
+                            .append("latitud", latitud)
+                            .append("longitud", longitud));
 
-                mongoCollection.updateOne(new Document("nombre", hotelAEditar), updateDocument).getAsync(updateTask -> {
-                    if (updateTask.isSuccess()) {
-                        Toast.makeText(AdminEditActivity.this, "Hotel editado", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(AdminEditActivity.this, AdminListActivity.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(AdminEditActivity.this, "Error al editar hotel", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    mongoCollection.updateOne(new Document("nombre", hotelAEditar), updateDocument).getAsync(updateTask -> {
+                        if (updateTask.isSuccess()) {
+                            Toast.makeText(AdminEditActivity.this, "Hotel editado", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(AdminEditActivity.this, AdminListActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(AdminEditActivity.this, "Error al editar hotel", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             }
         });
+
     }
 
     public class ConexionTask extends AsyncTask<Void, Void, Void> {

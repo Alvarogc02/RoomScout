@@ -30,6 +30,9 @@ public final class ActivityBookingBinding implements ViewBinding {
   public final Button btnReservar;
 
   @NonNull
+  public final Button btnVolver;
+
+  @NonNull
   public final EditText etPersonas;
 
   @NonNull
@@ -54,13 +57,14 @@ public final class ActivityBookingBinding implements ViewBinding {
   public final TextView tvHotel;
 
   private ActivityBookingBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnFechas,
-      @NonNull Button btnReservar, @NonNull EditText etPersonas, @NonNull LinearLayout llFechas,
-      @NonNull LinearLayout llFechasSeleccionadas, @NonNull LinearLayout llPersonas,
-      @NonNull Toolbar toolbar, @NonNull TextView tvFechaIda, @NonNull TextView tvFechaVuelta,
-      @NonNull TextView tvHotel) {
+      @NonNull Button btnReservar, @NonNull Button btnVolver, @NonNull EditText etPersonas,
+      @NonNull LinearLayout llFechas, @NonNull LinearLayout llFechasSeleccionadas,
+      @NonNull LinearLayout llPersonas, @NonNull Toolbar toolbar, @NonNull TextView tvFechaIda,
+      @NonNull TextView tvFechaVuelta, @NonNull TextView tvHotel) {
     this.rootView = rootView;
     this.btnFechas = btnFechas;
     this.btnReservar = btnReservar;
+    this.btnVolver = btnVolver;
     this.etPersonas = etPersonas;
     this.llFechas = llFechas;
     this.llFechasSeleccionadas = llFechasSeleccionadas;
@@ -107,6 +111,12 @@ public final class ActivityBookingBinding implements ViewBinding {
       id = R.id.btnReservar;
       Button btnReservar = ViewBindings.findChildViewById(rootView, id);
       if (btnReservar == null) {
+        break missingId;
+      }
+
+      id = R.id.btnVolver;
+      Button btnVolver = ViewBindings.findChildViewById(rootView, id);
+      if (btnVolver == null) {
         break missingId;
       }
 
@@ -159,7 +169,7 @@ public final class ActivityBookingBinding implements ViewBinding {
       }
 
       return new ActivityBookingBinding((ConstraintLayout) rootView, btnFechas, btnReservar,
-          etPersonas, llFechas, llFechasSeleccionadas, llPersonas, toolbar, tvFechaIda,
+          btnVolver, etPersonas, llFechas, llFechasSeleccionadas, llPersonas, toolbar, tvFechaIda,
           tvFechaVuelta, tvHotel);
     }
     String missingId = rootView.getResources().getResourceName(id);

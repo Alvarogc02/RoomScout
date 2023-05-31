@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Usuario\.gradle\caches\transforms-3\d16ce534cde882e79dbe55671c807d44\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\Usuario\.gradle\caches\transforms-3\1e62f8df31b007345b402ff3ccfe82af\transformed\viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\Usuario\.gradle\caches\transforms-3\2d4c53cf56e57132059dff8ad374e154\transformed\library-1.6.2\AndroidManifest.xml:2:1-13:12
@@ -54,22 +54,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-3\4c4c874e965f9e853d0367470d0f5fa0\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\Usuario\.gradle\caches\transforms-3\8b1180943ba80544473d0735af4b93f9\transformed\materialish-progress-1.7\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Usuario\.gradle\caches\transforms-3\9812a1b0c4d75b583cf05262431bd1a0\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
-INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
+INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
 	package
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-136:12
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:1-135:12
 		INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:2:11-69
@@ -81,28 +81,24 @@ MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Usuario\
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\39a3aa9a89670cca3f94cd5935e30e59\transformed\play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:5:22-64
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:6:5-79
-	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.hardware.location.gps
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:7:5-69
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:6:5-69
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:7:22-66
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:6:22-66
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:8:5-79
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Usuario\.gradle\caches\transforms-3\d16ce534cde882e79dbe55671c807d44\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Usuario\.gradle\caches\transforms-3\d16ce534cde882e79dbe55671c807d44\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\39a3aa9a89670cca3f94cd5935e30e59\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] C:\Users\Usuario\.gradle\caches\transforms-3\39a3aa9a89670cca3f94cd5935e30e59\transformed\play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:11:5-134:19
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:10:5-133:19
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\Usuario\.gradle\caches\transforms-3\2d4c53cf56e57132059dff8ad374e154\transformed\library-1.6.2\AndroidManifest.xml:11:5-20
 MERGED from [com.github.f0ris.sweetalert:library:1.6.2] C:\Users\Usuario\.gradle\caches\transforms-3\2d4c53cf56e57132059dff8ad374e154\transformed\library-1.6.2\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Usuario\.gradle\caches\transforms-3\8a556596a2de9e5e0508d0d3892eea91\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
@@ -132,131 +128,131 @@ MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\Usuario\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-3\317a53ffdca17c1639b46eb0812228f9\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:15:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:13:9-54
 	android:roundIcon
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:16:9-54
 	tools:targetApi
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:20:9-29
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:19:9-29
 	android:icon
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:19:9-39
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:18:9-39
 	android:dataExtractionRules
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:13:9-65
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:12:9-65
 activity#rsHoteles.FavsActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:21:9-27:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:23:13-50
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:22:13-50
 meta-data#android.app.lib_name
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:25:13-27:36
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:24:13-26:36
 	android:value
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:27:17-33
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:26:17-33
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:26:17-52
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:25:17-52
 activity#rsAdmin.AdminEditActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:29:9-35:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:28:9-34:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:30:13-53
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:29:13-53
 activity#rsAdmin.AdminAllBookingsActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:36:9-42:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:35:9-41:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:37:13-60
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:36:13-60
 activity#rsAdmin.AdminUsersActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:43:9-49:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:42:9-48:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:44:13-54
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:43:13-54
 activity#rsAdmin.AdminAddUserActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:50:9-56:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:49:9-55:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:52:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:51:13-56
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:50:13-56
 activity#rsAdmin.AdminListActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:57:9-63:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:56:9-62:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:59:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:58:13-53
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:57:13-53
 activity#rsAdmin.AdminMainActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:64:9-70:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:63:9-69:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:66:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:65:13-53
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:64:13-53
 activity#rsAdmin.AdminInsertActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:71:9-77:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:70:9-76:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:73:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:72:13-55
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:71:13-55
 activity#rsReservas.AllBookingsActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:78:9-84:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:77:9-83:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:80:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:79:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:79:13-58
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:78:13-58
 activity#rsMain.SignActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:85:9-91:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:84:9-90:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:87:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:86:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:86:13-47
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:85:13-47
 activity#rsReservas.BookingActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:92:9-98:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:91:9-97:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:94:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:93:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:93:13-54
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:92:13-54
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:110:9-112:71
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:109:9-111:71
 	android:value
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:112:13-68
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:111:13-68
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:111:13-58
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:110:13-58
 activity#rsHoteles.MapsActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:114:9-117:59
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:113:9-116:59
 	android:label
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:117:13-56
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:116:13-56
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:116:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:115:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:115:13-50
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:114:13-50
 activity#rsHoteles.ListActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:118:9-124:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:117:9-123:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:120:13-37
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:119:13-37
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:119:13-50
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:118:13-50
 activity#rsMain.LoginActivity
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:125:9-133:20
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:124:9-132:20
 	android:exported
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:127:13-36
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:126:13-36
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:126:13-48
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:125:13-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:128:13-132:29
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:127:13-131:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:129:17-69
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:128:17-69
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:129:25-66
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:128:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:131:17-77
+ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:130:17-77
 	android:name
-		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:131:27-74
+		ADDED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml:130:27-74
 uses-sdk
 INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Usuario\Desktop\TFG\RoomScout\RoomScout\app\src\main\AndroidManifest.xml

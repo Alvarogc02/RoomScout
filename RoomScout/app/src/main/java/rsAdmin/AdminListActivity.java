@@ -48,6 +48,10 @@ public class AdminListActivity extends AppCompatActivity {
 
     private boolean ordenMenorAMayor = true;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

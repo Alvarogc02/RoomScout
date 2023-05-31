@@ -7,13 +7,24 @@
     android:background="@color/blanco_perla">
 
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        android:elevation="4dp"
-        android:background="@color/rosa_empolvado"/>
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/rosa_empolvado"
+        app:titleTextColor="@color/marron_grisaceo"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- Nombre del hotel -->
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginBottom="6dp"
+            android:drawableStart="@drawable/ic_back"
+            android:layout_gravity="bottom"/>
+    </androidx.appcompat.widget.Toolbar>
+
     <TextView
         android:id="@+id/tvHotel"
         android:layout_width="0dp"
@@ -28,7 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Selecciona las fechas -->
     <LinearLayout
         android:id="@+id/llFechas"
         android:layout_width="0dp"
@@ -61,7 +71,6 @@
 
     </LinearLayout>
 
-    <!-- Fechas -->
     <LinearLayout
         android:id="@+id/llFechasSeleccionadas"
         android:layout_width="0dp"
@@ -72,7 +81,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Fecha de ida -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -98,7 +106,6 @@
                 android:textStyle="bold"/>
         </LinearLayout>
 
-        <!-- Fecha de vuelta -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -125,7 +132,6 @@
 
     </LinearLayout>
 
-    <!-- Número de personas -->
     <LinearLayout
         android:id="@+id/llPersonas"
         android:layout_width="0dp"
@@ -157,7 +163,6 @@
 
     </LinearLayout>
 
-    <!-- Botón Reservar -->
     <Button
         android:id="@+id/btnReservar"
         android:layout_width="0dp"

@@ -27,6 +27,9 @@ public final class ActivityAdminInsertBinding implements ViewBinding {
   public final Button btnGuardar;
 
   @NonNull
+  public final Button btnVolver;
+
+  @NonNull
   public final EditText editTextNombre;
 
   @NonNull
@@ -48,11 +51,12 @@ public final class ActivityAdminInsertBinding implements ViewBinding {
   public final TextView tvUbicacion;
 
   private ActivityAdminInsertBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnGuardar,
-      @NonNull EditText editTextNombre, @NonNull EditText editTextPrecio,
+      @NonNull Button btnVolver, @NonNull EditText editTextNombre, @NonNull EditText editTextPrecio,
       @NonNull LinearLayout mapLayout, @NonNull Toolbar toolbar, @NonNull TextView tvDireccion,
       @NonNull TextView tvTitle, @NonNull TextView tvUbicacion) {
     this.rootView = rootView;
     this.btnGuardar = btnGuardar;
+    this.btnVolver = btnVolver;
     this.editTextNombre = editTextNombre;
     this.editTextPrecio = editTextPrecio;
     this.mapLayout = mapLayout;
@@ -92,6 +96,12 @@ public final class ActivityAdminInsertBinding implements ViewBinding {
       id = R.id.btnGuardar;
       Button btnGuardar = ViewBindings.findChildViewById(rootView, id);
       if (btnGuardar == null) {
+        break missingId;
+      }
+
+      id = R.id.btnVolver;
+      Button btnVolver = ViewBindings.findChildViewById(rootView, id);
+      if (btnVolver == null) {
         break missingId;
       }
 
@@ -137,8 +147,8 @@ public final class ActivityAdminInsertBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAdminInsertBinding((ConstraintLayout) rootView, btnGuardar, editTextNombre,
-          editTextPrecio, mapLayout, toolbar, tvDireccion, tvTitle, tvUbicacion);
+      return new ActivityAdminInsertBinding((ConstraintLayout) rootView, btnGuardar, btnVolver,
+          editTextNombre, editTextPrecio, mapLayout, toolbar, tvDireccion, tvTitle, tvUbicacion);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

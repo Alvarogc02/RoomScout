@@ -45,7 +45,7 @@ public class AdminInsertActivity extends AppCompatActivity implements OnMapReady
 
     private EditText etNombre, etPrecio;
     private TextView tvDireccion;
-    private Button btnGuardar;
+    private Button btnGuardar, btnVolver;
 
     private GoogleMap mMap;
     private Marker marcadorActual;
@@ -56,7 +56,9 @@ public class AdminInsertActivity extends AppCompatActivity implements OnMapReady
     private double longitud;
     private int precio;
 
-
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,7 @@ public class AdminInsertActivity extends AppCompatActivity implements OnMapReady
 
         tvDireccion = findViewById(R.id.tvDireccion);
 
+        btnVolver = findViewById(R.id.btnVolver);
         btnGuardar = findViewById(R.id.btnGuardar);
 
         // Obtener el mapa asincrónicamente
@@ -77,44 +80,55 @@ public class AdminInsertActivity extends AppCompatActivity implements OnMapReady
 
         Conexion.conectarBD(AdminInsertActivity.this);
 
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminInsertActivity.this, AdminListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 nombre = etNombre.getText().toString();
-                precio = Integer.parseInt(etPrecio.getText().toString());
 
-                // Generar un número aleatorio entre 1 y 10
-                Random random = new Random();
-                int numAleatorio = random.nextInt(10) + 1;
+                if (nombre.isEmpty() || direccion.isEmpty() || etPrecio.getText().toString().isEmpty()) {
+                    Toast.makeText(AdminInsertActivity.this, "Debe completar todos los campos", Toast.LENGTH_SHORT).show();
+                } else {
+                    precio = Integer.parseInt(etPrecio.getText().toString());
+                    // Generar un número aleatorio entre 1 y 10
+                    Random random = new Random();
+                    int numAleatorio = random.nextInt(10) + 1;
 
-                // Redondear hacia abajo sin decimales
-                int valoracion = (int) Math.floor(numAleatorio);
+                    // Redondear hacia abajo sin decimales
+                    int valoracion = (int) Math.floor(numAleatorio);
 
-                List<String> arrayFav = Arrays.asList();
+                    List<String> arrayFav = Arrays.asList();
 
-                Conexion.conectarCollection("hoteles");
+                    Conexion.conectarCollection("hoteles");
 
-                Document hotel = new Document();
-                hotel.append("nombre", nombre)
-                        .append("direccion", direccion)
-                        .append("precio/noche", precio)
-                        .append("latitud", latitud)
-                        .append("longitud", longitud)
-                        .append("valoracion", valoracion)
-                        .append("favorito_de", arrayFav);
+                    Document hotel = new Document();
+                    hotel.append("nombre", nombre)
+                            .append("direccion", direccion)
+                            .append("precio/noche", precio)
+                            .append("latitud", latitud)
+                            .append("longitud", longitud)
+                            .append("valoracion", valoracion)
+                            .append("favorito_de", arrayFav);
 
-                mongoCollection.insertOne(hotel).getAsync(result -> {
-                    if (result.isSuccess()) {
-                        Log.d("Prueba", "Insertado");
-                        Toast.makeText(AdminInsertActivity.this, "Hotel insertado correctamente", Toast.LENGTH_SHORT).show();
+                    mongoCollection.insertOne(hotel).getAsync(result -> {
+                        if (result.isSuccess()) {
+                            Log.d("Prueba", "Insertado");
+                            Toast.makeText(AdminInsertActivity.this, "Hotel insertado correctamente", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(AdminInsertActivity.this, AdminListActivity.class);
-                        startActivity(intent);
-                    } else {
-                        Log.d("Prueba", "No Insertado");
-                    }
-                });
+                            Intent intent = new Intent(AdminInsertActivity.this, AdminListActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Log.d("Prueba", "No Insertado");
+                        }
+                    });
+                }
             }
         });
     }

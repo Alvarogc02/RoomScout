@@ -15,6 +15,10 @@ public class AdminMainActivity extends AppCompatActivity {
 
     private Button btnHoteles, btnUsuarios, btnReservas, btnVolver;
 
+    // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
+    @Override
+    public void onBackPressed() {}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

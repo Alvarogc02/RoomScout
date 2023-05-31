@@ -143,8 +143,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng centro = new LatLng(39.42, -4.30);
-        float zoomLevel = 5.75f;
+        LatLng centro = new LatLng(39.42, -3.40);
+        float zoomLevel = 5.35f;
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(centro, zoomLevel);
         mMap.moveCamera(cameraUpdate);
 
