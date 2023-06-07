@@ -1,82 +1,78 @@
 [
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_maps.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_maps.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\adaptador_reserva.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_reserva.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_all_bookings.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_all_bookings.xml"
     },
     {
         "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_insert.xml",
         "source": "com.example.roomscout.app-main-36:/layout/activity_admin_insert.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\adaptador_reserva_admin.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_reserva_admin.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_booking.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_booking.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\adaptador_hotel_admin.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_hotel_admin.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/adaptador_hotel_admin.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/adaptador_hotel_admin.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_edit.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_edit.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_list.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_list.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_add_user.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_add_user.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/adaptador_reserva.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/adaptador_reserva.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_all_bookings.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_all_bookings.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/adaptador_reserva_admin.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/adaptador_reserva_admin.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_users.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_users.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_users.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_users.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\adaptador_usuarios_admin.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_usuarios_admin.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_maps.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_maps.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_list.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_list.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_main.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_main.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\adaptador_hotel.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_hotel.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_sign.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_sign.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_all_bookings.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_all_bookings.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_login.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_sign.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_sign.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_edit.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_edit.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_login.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_list.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_list.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_booking.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_booking.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_favs.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_favs.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_insert.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_insert.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/adaptador_usuarios_admin.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/adaptador_usuarios_admin.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_list.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_list.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/adaptador_hotel.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/adaptador_hotel.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_main.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_main.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_all_bookings.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_all_bookings.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_favs.xml",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_favs.xml"
+        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_add_user.xml",
+        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_add_user.xml"
     }
 ]

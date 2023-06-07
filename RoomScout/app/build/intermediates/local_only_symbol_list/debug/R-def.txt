@@ -19,7 +19,6 @@ drawable ic_favon
 drawable ic_filtrar
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable marker
 drawable nav_exit
 drawable nav_favs
 drawable nav_hoteles
