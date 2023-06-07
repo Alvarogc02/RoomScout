@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvFechaIda"
         app:layout_constraintEnd_toStartOf="@+id/tvPrecio"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"/>
 
     <TextView
@@ -58,6 +58,18 @@
         app:layout_constraintStart_toEndOf="@+id/tvPersonas"
         app:layout_constraintHorizontal_weight="1"/>
 
+    <TextView
+        android:id="@+id/tvUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/marron_grisaceo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"/>
+
+
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
@@ -69,11 +81,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPrecio"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/rosa_empolvado"
-        app:layout_constraintTop_toBottomOf="@id/btnCancelar"
-        android:layout_marginTop="5dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ drawable ic_favon
 drawable ic_filtrar
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable marker
 drawable nav_exit
 drawable nav_favs
 drawable nav_hoteles
@@ -84,7 +85,6 @@ id tvSignUp
 id tvTitle
 id tvUbicacion
 id tvUsuario
-id viewSeparador
 layout activity_admin_add_user
 layout activity_admin_all_bookings
 layout activity_admin_edit

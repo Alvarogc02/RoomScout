@@ -52,10 +52,6 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_hotel.xml"
     },
     {
-        "merged": "com.example.roomscout.app-merged_res-34:/layout_activity_admin_edit.xml.flat",
-        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_edit.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-merged_res-34:\\layout_activity_admin_users.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_users.xml"
     },
@@ -126,6 +122,10 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-merged_res-34:\\layout_activity_booking.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_booking.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-merged_res-34:\\drawable_marker.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\drawable\\marker.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-merged_res-34:\\mipmap-mdpi_ic_launcher_foreground.png.flat",

@@ -4,6 +4,7 @@ package com.example.roomscout.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +19,9 @@ import java.lang.String;
 public final class AdaptadorReservaAdminBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final Button btnCancelar;
 
   @NonNull
   public final TextView tvFechaIda;
@@ -37,21 +41,18 @@ public final class AdaptadorReservaAdminBinding implements ViewBinding {
   @NonNull
   public final TextView tvUsuario;
 
-  @NonNull
-  public final View viewSeparador;
-
   private AdaptadorReservaAdminBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView tvFechaIda, @NonNull TextView tvFechaVuelta,
+      @NonNull Button btnCancelar, @NonNull TextView tvFechaIda, @NonNull TextView tvFechaVuelta,
       @NonNull TextView tvNombreHotel, @NonNull TextView tvPersonas, @NonNull TextView tvPrecio,
-      @NonNull TextView tvUsuario, @NonNull View viewSeparador) {
+      @NonNull TextView tvUsuario) {
     this.rootView = rootView;
+    this.btnCancelar = btnCancelar;
     this.tvFechaIda = tvFechaIda;
     this.tvFechaVuelta = tvFechaVuelta;
     this.tvNombreHotel = tvNombreHotel;
     this.tvPersonas = tvPersonas;
     this.tvPrecio = tvPrecio;
     this.tvUsuario = tvUsuario;
-    this.viewSeparador = viewSeparador;
   }
 
   @Override
@@ -81,6 +82,12 @@ public final class AdaptadorReservaAdminBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnCancelar;
+      Button btnCancelar = ViewBindings.findChildViewById(rootView, id);
+      if (btnCancelar == null) {
+        break missingId;
+      }
+
       id = R.id.tvFechaIda;
       TextView tvFechaIda = ViewBindings.findChildViewById(rootView, id);
       if (tvFechaIda == null) {
@@ -117,14 +124,8 @@ public final class AdaptadorReservaAdminBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.viewSeparador;
-      View viewSeparador = ViewBindings.findChildViewById(rootView, id);
-      if (viewSeparador == null) {
-        break missingId;
-      }
-
-      return new AdaptadorReservaAdminBinding((ConstraintLayout) rootView, tvFechaIda,
-          tvFechaVuelta, tvNombreHotel, tvPersonas, tvPrecio, tvUsuario, viewSeparador);
+      return new AdaptadorReservaAdminBinding((ConstraintLayout) rootView, btnCancelar, tvFechaIda,
+          tvFechaVuelta, tvNombreHotel, tvPersonas, tvPrecio, tvUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

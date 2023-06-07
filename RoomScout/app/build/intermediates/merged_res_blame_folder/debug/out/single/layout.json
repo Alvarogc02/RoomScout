@@ -48,10 +48,6 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\adaptador_hotel.xml"
     },
     {
-        "merged": "com.example.roomscout.app-mergeDebugResources-33:/layout/activity_admin_edit.xml",
-        "source": "com.example.roomscout.app-main-36:/layout/activity_admin_edit.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-mergeDebugResources-33:\\layout\\activity_admin_all_bookings.xml",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.4\\com.example.roomscout.app-main-36:\\layout\\activity_admin_all_bookings.xml"
     },

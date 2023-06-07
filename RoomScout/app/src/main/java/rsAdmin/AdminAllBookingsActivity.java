@@ -19,6 +19,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.mongodb.RealmResultTask;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 import rsAdaptadores.AdaptadorReservas;
@@ -38,6 +39,8 @@ public class AdminAllBookingsActivity extends AppCompatActivity {
 
     private Button btnVolver;
 
+    private SweetAlertDialog swal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,10 @@ public class AdminAllBookingsActivity extends AppCompatActivity {
         lvReservas = this.findViewById(R.id.lvReservas);
         adaptador = new AdaptadorReservasAdmin(AdminAllBookingsActivity.this, listaReservas);
         lvReservas.setAdapter(adaptador);
+
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(AdminAllBookingsActivity.this);
         new ConexionTask().execute();
@@ -93,6 +100,9 @@ public class AdminAllBookingsActivity extends AppCompatActivity {
                     Toast.makeText(AdminAllBookingsActivity.this, "Reservas: " + listaReservas.size(), Toast.LENGTH_SHORT).show();
                     // Aquí se imprime el registro de depuración DESPUÉS de que se haya actualizado la lista
                     lvReservas.setAdapter(adaptador);
+
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("Error", "Error al buscar reservas");
                 }

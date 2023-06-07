@@ -107,13 +107,13 @@ public class AdminEditActivity extends AppCompatActivity implements OnMapReadyCa
             @Override
             public void onClick(View v) {
                 nombre = etNombre.getText().toString();
-                precio = Integer.parseInt(etPrecio.getText().toString());
                 direccion = tvDireccion.getText().toString();
 
                 // Verificar si algún campo está vacío
-                if (nombre.isEmpty() || direccion.isEmpty() || etPrecio.getText().toString().isEmpty()) {
+                if (nombre.isEmpty() || direccion.equals("") || etPrecio.getText().toString().isEmpty()) {
                     Toast.makeText(AdminEditActivity.this, "Debe completar todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
+                    precio = Integer.parseInt(etPrecio.getText().toString());
                     Document updateDocument = new Document().append("$set", new Document()
                             .append("nombre", nombre)
                             .append("direccion", direccion)

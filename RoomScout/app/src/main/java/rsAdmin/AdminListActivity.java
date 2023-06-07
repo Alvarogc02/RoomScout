@@ -45,8 +45,9 @@ public class AdminListActivity extends AppCompatActivity {
 
     private String nombreHotel;
 
-
     private boolean ordenMenorAMayor = true;
+
+    private SweetAlertDialog swal;
 
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
@@ -113,6 +114,7 @@ public class AdminListActivity extends AppCompatActivity {
                                 .setNeutralButton("Eliminar", new SweetAlertDialog.OnSweetClickListener() {
                             @Override
                             public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                sweetAlertDialog.dismiss();
                                 // Crear otro AlertDialog para confirmar la eliminación del hotel
                                 new SweetAlertDialog(AdminListActivity.this)
                                         .setTitleText("¿Está seguro de que desea eliminar el hotel " + nombreHotel + "?")
@@ -144,6 +146,9 @@ public class AdminListActivity extends AppCompatActivity {
             }
         });
 
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(AdminListActivity.this);
         new ConexionTask().execute();
@@ -188,6 +193,9 @@ public class AdminListActivity extends AppCompatActivity {
 
                     // Aquí se imprime el registro de depuración DESPUÉS de que se haya actualizado la lista
                     lvHoteles.setAdapter(adaptador);
+
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("ObtenerHotelesTask", "Error al buscar hoteles");
                 }

@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:text="Dirección"
+            android:hint="Dirección"
             android:textSize="18dp"
             android:textColor="@color/marron_grisaceo"/>
 

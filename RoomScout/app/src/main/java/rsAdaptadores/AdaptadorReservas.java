@@ -18,63 +18,83 @@ import org.bson.Document;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.mongodb.RealmResultTask;
 import io.realm.mongodb.mongo.result.DeleteResult;
-import rsAdmin.AdminListActivity;
 import rsConexion.Conexion;
 import rsObjetos.Reserva;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class AdaptadorReservas extends BaseAdapter {
 
     private static LayoutInflater inflater = null;
-    Context context;
+    private Context context;
     private List<Reserva> listaReservas = new ArrayList<>();
+    private Date currentDate;
 
     public AdaptadorReservas(Context context, List<Reserva> listaReservas) {
         this.context = context;
         this.listaReservas = listaReservas;
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        Conexion.conectarBD(context);
+        currentDate = new Date(); // Obtener la fecha actual
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        final View vista = inflater.inflate(R.layout.adaptador_reserva, null);
-
+        final View vista = inflater.inflate(R.layout.adaptador_reserva_admin, null);
         TextView tvNombreHotel = vista.findViewById(R.id.tvNombreHotel);
         TextView tvFechaIda = vista.findViewById(R.id.tvFechaIda);
         TextView tvFechaVuelta = vista.findViewById(R.id.tvFechaVuelta);
         TextView tvPersonas = vista.findViewById(R.id.tvPersonas);
         TextView tvPrecio = vista.findViewById(R.id.tvPrecio);
+        TextView tvUsuario = vista.findViewById(R.id.tvUsuario);
         Button btnCancelar = vista.findViewById(R.id.btnCancelar);
-        btnCancelar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new SweetAlertDialog(context).setTitleText("¿Desea cancelar la reserva?")
-                        .setConfirmButton("Sí", new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                //Eliminar reserva
-                                new CancelarReservaTask(position).execute();
-                                sweetAlertDialog.dismiss();
-                            }
-                        })
-                        .setCancelButton("No", new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                sweetAlertDialog.dismiss();
-                            }
-                        }).show();
-            }
-        });
+
+        // Verificar si la fecha actual es anterior a la fecha de ida
+        String fechaIdaStr = listaReservas.get(position).getFechaIda();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        Date fechaIda = null;
+        try {
+            fechaIda = sdf.parse(fechaIdaStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        if (currentDate.before(fechaIda)) {
+            btnCancelar.setVisibility(View.VISIBLE);
+            btnCancelar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new SweetAlertDialog(context).setTitleText("¿Desea cancelar la reserva?")
+                            .setConfirmButton("Sí", new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    // Eliminar reserva
+                                    new CancelarReservaTask(position).execute();
+                                    sweetAlertDialog.dismiss();
+                                }
+                            })
+                            .setCancelButton("No", new SweetAlertDialog.OnSweetClickListener() {
+                                @Override
+                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                    sweetAlertDialog.dismiss();
+                                }
+                            }).show();
+                }
+            });
+        } else {
+            btnCancelar.setVisibility(View.GONE);
+        }
 
         tvNombreHotel.setText("Hotel: " + listaReservas.get(position).getHotel());
         tvFechaIda.setText("Ida: " + listaReservas.get(position).getFechaIda());
         tvFechaVuelta.setText("Vuelta: " + listaReservas.get(position).getFechaVuelta());
         tvPersonas.setText("Nº personas: " + listaReservas.get(position).getPersonas());
         tvPrecio.setText("Total:" + listaReservas.get(position).getPrecio());
+        tvUsuario.setText("Usuario: " + listaReservas.get(position).getUsuario());
 
         return vista;
     }

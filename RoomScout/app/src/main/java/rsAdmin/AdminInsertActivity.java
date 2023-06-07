@@ -92,8 +92,9 @@ public class AdminInsertActivity extends AppCompatActivity implements OnMapReady
             @Override
             public void onClick(View v) {
                 nombre = etNombre.getText().toString();
+                direccion = tvDireccion.getText().toString();
 
-                if (nombre.isEmpty() || direccion.isEmpty() || etPrecio.getText().toString().isEmpty()) {
+                if (nombre.isEmpty() || direccion.equals("") || etPrecio.getText().toString().isEmpty()) {
                     Toast.makeText(AdminInsertActivity.this, "Debe completar todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     precio = Integer.parseInt(etPrecio.getText().toString());

@@ -18,6 +18,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.mongodb.RealmResultTask;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 import rsAdaptadores.AdaptadorUsuariosAdmin;
@@ -32,6 +33,8 @@ public class AdminUsersActivity extends AppCompatActivity {
     private AdaptadorUsuariosAdmin adaptador;
 
     private Button btnAnadirUser, btnVolver;
+
+    private SweetAlertDialog swal;
 
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
@@ -63,6 +66,10 @@ public class AdminUsersActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(AdminUsersActivity.this);
         new ConexionTask().execute();
@@ -97,6 +104,9 @@ public class AdminUsersActivity extends AppCompatActivity {
 
                     // Aquí se imprime el registro de depuración DESPUÉS de que se haya actualizado la lista
                     lvUsuarios.setAdapter(adaptador);
+
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("Prueba", "Error al buscar hoteles");
                 }

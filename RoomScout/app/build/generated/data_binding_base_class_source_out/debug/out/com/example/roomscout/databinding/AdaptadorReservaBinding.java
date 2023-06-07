@@ -38,9 +38,13 @@ public final class AdaptadorReservaBinding implements ViewBinding {
   @NonNull
   public final TextView tvPrecio;
 
+  @NonNull
+  public final TextView tvUsuario;
+
   private AdaptadorReservaBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCancelar,
       @NonNull TextView tvFechaIda, @NonNull TextView tvFechaVuelta,
-      @NonNull TextView tvNombreHotel, @NonNull TextView tvPersonas, @NonNull TextView tvPrecio) {
+      @NonNull TextView tvNombreHotel, @NonNull TextView tvPersonas, @NonNull TextView tvPrecio,
+      @NonNull TextView tvUsuario) {
     this.rootView = rootView;
     this.btnCancelar = btnCancelar;
     this.tvFechaIda = tvFechaIda;
@@ -48,6 +52,7 @@ public final class AdaptadorReservaBinding implements ViewBinding {
     this.tvNombreHotel = tvNombreHotel;
     this.tvPersonas = tvPersonas;
     this.tvPrecio = tvPrecio;
+    this.tvUsuario = tvUsuario;
   }
 
   @Override
@@ -113,8 +118,14 @@ public final class AdaptadorReservaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvUsuario;
+      TextView tvUsuario = ViewBindings.findChildViewById(rootView, id);
+      if (tvUsuario == null) {
+        break missingId;
+      }
+
       return new AdaptadorReservaBinding((ConstraintLayout) rootView, btnCancelar, tvFechaIda,
-          tvFechaVuelta, tvNombreHotel, tvPersonas, tvPrecio);
+          tvFechaVuelta, tvNombreHotel, tvPersonas, tvPrecio, tvUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

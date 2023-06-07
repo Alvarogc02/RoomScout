@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import rsHoteles.FavsActivity;
 import rsHoteles.ListActivity;
 import rsHoteles.MapsActivity;
@@ -47,6 +48,8 @@ public class AllBookingsActivity extends AppCompatActivity implements Navigation
 
     private String nick;
 
+    private SweetAlertDialog swal;
+
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
     public void onBackPressed() {}
@@ -78,6 +81,10 @@ public class AllBookingsActivity extends AppCompatActivity implements Navigation
         lvReservas = this.findViewById(R.id.lvReservas);
         adaptador = new AdaptadorReservas(AllBookingsActivity.this, listaReservas);
         lvReservas.setAdapter(adaptador);
+
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(AllBookingsActivity.this);
         new ConexionTask().execute();
@@ -115,6 +122,9 @@ public class AllBookingsActivity extends AppCompatActivity implements Navigation
                     Toast.makeText(AllBookingsActivity.this, "Reservas: " + listaReservas.size(), Toast.LENGTH_SHORT).show();
                     // Aquí se imprime el registro de depuración DESPUÉS de que se haya actualizado la lista
                     lvReservas.setAdapter(adaptador);
+
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("Error", "Error al buscar reservas");
                 }

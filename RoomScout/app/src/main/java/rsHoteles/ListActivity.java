@@ -33,6 +33,7 @@ import java.util.List;
 
 import org.bson.Document;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import rsConexion.Conexion;
 import rsAdaptadores.AdaptadorHoteles;
 import rsMain.LoginActivity;
@@ -60,6 +61,8 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
     private String nick;
     private boolean ordenMenorAMayor = true;
 
+    private SweetAlertDialog swal;
+
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
     public void onBackPressed() {}
@@ -78,7 +81,6 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
                 ordenarPorPrecio();
             }
         });
-
 
 
         Bundle bundle = this.getIntent().getExtras();
@@ -102,6 +104,9 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
         adaptador = new AdaptadorHoteles(ListActivity.this, listaHoteles, btnFavorito, nick);
         lvHoteles.setAdapter(adaptador);
 
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(ListActivity.this);
         new ConexionTask().execute();
@@ -147,6 +152,8 @@ public class ListActivity extends AppCompatActivity implements NavigationView.On
 
                     // Aquí se imprime el registro de depuración DESPUÉS de que se haya actualizado la lista
                     lvHoteles.setAdapter(adaptador);
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("ObtenerHotelesTask", "Error al buscar hoteles");
                 }

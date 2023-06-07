@@ -69,12 +69,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"/>
 
-    <View
-        android:id="@+id/viewSeparador"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/rosa_empolvado"
-        app:layout_constraintTop_toBottomOf="@id/tvUsuario"
-        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:textColor="@color/marron_grisaceo"
+        android:background="@null"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrecio"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

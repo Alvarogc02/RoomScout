@@ -9,6 +9,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +24,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
@@ -32,6 +35,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import rsConexion.Conexion;
 import rsMain.LoginActivity;
 import rsObjetos.Hotel;
@@ -56,6 +60,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private double latitud;
     private double longitud;
 
+    private SweetAlertDialog swal;
+
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
     public void onBackPressed() {}
@@ -77,6 +83,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // Crear barra de tareas con menú lateral desplegable
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("RoomScout");
         setSupportActionBar(toolbar);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -90,6 +97,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         MenuItem item = menu.findItem(R.id.nav_usuario);
         item.setTitle(nick);
 
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(MapsActivity.this);
         new ConexionTask().execute();
@@ -132,6 +142,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     Log.d("ObtenerHotelesTask", "Hoteles encontrados " + listaHoteles.size());
                     onMapReady(mMap);
 
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("ObtenerHotelesTask", "Error al buscar hoteles");
                 }
@@ -154,8 +166,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             latitud = listaHoteles.get(i).getLatitud();
             longitud = listaHoteles.get(i).getLongitud();
 
+            Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.marker);
+            int newWidth = 60;
+            int newHeight = 90;
+            Bitmap resizedBitmap = Bitmap.createScaledBitmap(originalBitmap, newWidth, newHeight, false);
+
             LatLng marcador = new LatLng(latitud, longitud);
-            mMap.addMarker(new MarkerOptions().position(marcador).title(nombreHotel));
+            mMap.addMarker(new MarkerOptions().position(marcador).title(nombreHotel).icon(BitmapDescriptorFactory.fromBitmap(resizedBitmap)));
         }
 
     }

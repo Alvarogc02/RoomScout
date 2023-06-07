@@ -33,6 +33,7 @@ import java.util.List;
 
 import org.bson.Document;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import rsConexion.Conexion;
 import rsAdaptadores.AdaptadorHoteles;
 import rsMain.LoginActivity;
@@ -61,6 +62,8 @@ public class FavsActivity extends AppCompatActivity implements NavigationView.On
 
     private String nick;
     private boolean ordenMenorAMayor = true;
+
+    private SweetAlertDialog swal;
 
     // Hacer que no se pueda volver a la ventana anterior pulsando el botón del movil
     @Override
@@ -121,6 +124,9 @@ public class FavsActivity extends AppCompatActivity implements NavigationView.On
 
         });
 
+        // Mostrar SweetAlert de Cargando
+        swal = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE).setTitleText("Cargando");
+        swal.show();
 
         Conexion.conectarBD(FavsActivity.this);
         new ConexionTask().execute();
@@ -187,6 +193,9 @@ public class FavsActivity extends AppCompatActivity implements NavigationView.On
                             }
                         }
                     }
+
+                    // Desaparecer SweetAlert de Cargando
+                    swal.dismiss();
                 } else {
                     Log.d("ObtenerHotelesTask", "Error al buscar hoteles");
                 }
